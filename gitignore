@@ -1,0 +1,28 @@
+# Build results
+**/[Bb]in/
+**/[Oo]bj/
+**/[Dd]ebug/
+**/[Rr]elease/
+**/x64/
+**/x86/
+
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.cache
+
+# Test files (optional - remove this line if you want to include test sounds)
+sounds/
+
+# NuGet
+packages/
+*.nupkg
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Publish output
+**/publish/
