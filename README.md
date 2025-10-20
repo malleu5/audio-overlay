@@ -65,13 +65,13 @@ git clone https://github.com/malleu5/audio-overlay.git
 cd audio-overlay
 
 # Build
-dotnet build
+dotnet build AudioOverlay.sln
 
 # Run
 dotnet run
 
 # Publish standalone executable
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:PublishTrimmed=true
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
 ```
 
 ## 📦 Dependencies
