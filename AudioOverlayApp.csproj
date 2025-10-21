@@ -1,12 +1,19 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
      <PropertyGroup>
-       <OutputType>WinExe</OutputType>
-       <TargetFramework>net8.0-windows</TargetFramework>
-       <Nullable>enable</Nullable>
-       <UseWPF>true</UseWPF>
-       <UseWindowsForms>true</UseWindowsForms>
-       <ApplicationIcon>icon.ico</ApplicationIcon>
-     </PropertyGroup>
+     <OutputType>WinExe</OutputType>
+     <TargetFramework>net8.0-windows</TargetFramework>
+     <Nullable>enable</Nullable>
+     <UseWPF>true</UseWPF>
+     <UseWindowsForms>true</UseWindowsForms>
+     <ApplicationIcon>icon.ico</ApplicationIcon>
+     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+      </PropertyGroup>
+
+      <PropertyGroup Condition="'$(Configuration)'=='Release'">
+        <PublishReadyToRun>true</PublishReadyToRun>
+        <SelfContained>true</SelfContained>
+        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+      </PropertyGroup>
 
      <ItemGroup>
        <Resource Include="icon.ico" />
