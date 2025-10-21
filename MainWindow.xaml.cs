@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -58,6 +58,10 @@ public partial class MainWindow : Window
         {
             var helper = new WindowInteropHelper(this);
             RegisterHotKey(helper.Handle, HOTKEY_ID, currentModifiers, currentKey);
+
+            // Load audio files after window is shown to improve startup time
+            if (!string.IsNullOrEmpty(currentFolderPath) && Directory.Exists(currentFolderPath))
+                LoadAudioFiles();
         };
 
         Closing += (s, e) =>
@@ -903,8 +907,7 @@ public partial class MainWindow : Window
             if (File.Exists(settingsFile))
             {
                 currentFolderPath = File.ReadAllText(settingsFile).Trim();
-                if (Directory.Exists(currentFolderPath))
-                    LoadAudioFiles();
+                // Delay LoadAudioFiles to after window is loaded
             }
         }
         catch { }
