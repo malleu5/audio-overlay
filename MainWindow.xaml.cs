@@ -675,6 +675,11 @@ public partial class MainWindow : Window
                             button.Background = new SolidColorBrush(Color.FromRgb(88, 101, 242));
                             isPlaying = false;
                         }
+                        // Dispose resources to allow replaying the same sound
+                        waveOutDevice?.Dispose();
+                        audioFileReader?.Dispose();
+                        waveOutDevice = null;
+                        audioFileReader = null;
                     });
                 };
             }
