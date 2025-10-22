@@ -13,6 +13,8 @@ A lightweight Windows desktop utility for quick access to your audio files with 
 - **Wide Format Support** - MP3, WAV, OGG, FLAC, M4A, AAC, WMA, AIFF, ALAC, OPUS
 - **Persistent Settings** - Remembers your folder and preferences
 
+![Audio Overlay in action](images/screenshot.png)
+
 ## 🚀 Download
 
 **[Download Latest Release](https://github.com/malleu5/audio-overlay/releases/latest)**
