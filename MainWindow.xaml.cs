@@ -82,7 +82,7 @@ public partial class MainWindow : Window
         Height = 450;
         WindowStyle = WindowStyle.None;
         ResizeMode = ResizeMode.NoResize;
-        Background = new SolidColorBrush(Color.FromRgb(47, 49, 54));
+        Background = Brushes.Transparent;
         Topmost = true;
         AllowsTransparency = true;
 
@@ -857,6 +857,8 @@ public partial class MainWindow : Window
         style.Setters.Add(new Setter(Button.TemplateProperty, template));
         return style;
     }
+
+
 
     private void AudioFile_Click(object sender, RoutedEventArgs e)
     {
